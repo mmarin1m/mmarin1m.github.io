@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="sacRmv"
+            type="ca.myairbuddyandi.SacRmv"/>
+    </data>
+    <LinearLayout
+        android:id="@+id/rmv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:shrinkColumns="0"
+        android:stretchColumns="1,2,3"
+        android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/RadioButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"/>
+            <TextView
+                android:text="@{sacRmv.myRmvString}"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"/>
+            <TextView
+                android:id="@+id/diveType"
+                android:text="@{sacRmv.diveTypeDesc}"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"/>
+            <TextView
+                android:text="@{`` + sacRmv.myBuddyRmvString}"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"/>
+    </LinearLayout>
+</layout>

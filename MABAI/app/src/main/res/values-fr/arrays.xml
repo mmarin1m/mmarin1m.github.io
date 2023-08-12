@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 2017-01-14 MM Arrays to load DB - Starts-->
+    <!-- 2017-01-14 MM Arrays to load Code tables - Starts-->
+    <!-- dive_type-->
+    <string-array name="diveType">
+        <item>L</item>
+        <item>L10</item>
+        <item>A</item>
+        <item>MI</item>
+        <item>MA</item>
+        <item>CL</item>
+        <item>DR</item>
+        <item>HA</item>
+        <item>WR</item>
+        <item>EA</item>
+        <item>CO</item>
+        <item>SW</item>
+        <item>NI</item>
+        <item>SH</item>
+        <item>DE</item>
+        <item>RE</item>
+        <item>SHO</item>
+        <item>SU</item>
+        <item>WO</item>
+        <item>TY</item>
+    </string-array>
+    <string-array name="diveTypeDescription">
+        <item>Dernière</item>
+        <item>Dernières 10</item>
+        <item>Moyenne</item>
+        <item>Minimum</item>
+        <item>Maximum</item>
+        <item>Classe</item>
+        <item>Dérive</item>
+        <item>Difficile</item>
+        <item>Épave</item>
+        <item>Facile</item>
+        <item>Froide</item>
+        <item>Nagée</item>
+        <item>Nuit</item>
+        <item>Peu profonde</item>
+        <item>Profonde</item>
+        <item>Repos</item>
+        <item>Rivage</item>
+        <item>Surface</item>
+        <item>Travail</item>
+        <item>Typique</item>
+    </string-array>
+    <string-array name="diveTypeSortOrder">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>110</item>
+        <item>120</item>
+        <item>130</item>
+        <item>140</item>
+        <item>150</item>
+        <item>160</item>
+        <item>170</item>
+        <item>180</item>
+        <item>190</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="diveTypeInPicker">
+        <item>N</item>
+        <item>N</item>
+        <item>N</item>
+        <item>N</item>
+        <item>N</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+    </string-array>
+    <string-array name="grouppType">
+        <item>SI</item>
+        <item>DO</item>
+        <item>SM</item>
+    </string-array>
+    <string-array name="groupTypeDescription">
+        <item>Simple</item>
+        <item>Double</item>
+        <item>Latéral</item>
+    </string-array>
+    <string-array name="groupTypeSystemDefined">
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+    </string-array>
+    <!-- segment_type-->
+    <string-array name="segmentType">
+        <item>STA</item>
+        <item>BC</item>
+        <item>DE</item>
+        <item>BT</item>
+        <item>TA</item>
+        <item>OOA</item>
+        <item>ADD</item>
+        <item>DD</item>
+        <item>ADS</item>
+        <item>DS</item>
+        <item>ASS</item>
+        <item>SS</item>
+        <item>AD</item>
+        <item>DEC</item>
+        <item>AS</item>
+        <item>STO</item>
+    </string-array>
+    <string-array name="segmentTypeDescription">
+        <item>Début</item>
+        <item>Vérifier bulles</item>
+        <item>Descente</item>
+        <item>Temps de fond</item>
+        <item>Retour</item>
+        <item>Manque d\'air</item>
+        <item>Remontée à déco profonde</item>
+        <item>Déco profonde</item>
+        <item>Remontée à arrêt profond</item>
+        <item>Arrêt profond</item>
+        <item>Remontée à arrêt sécurité</item>
+        <item>Arrêt sécurité</item>
+        <item>Remontée à déco</item>
+        <item>Déco</item>
+        <item>Remontée à surface</item>
+        <item>Arrêt</item>
+    </string-array>
+    <string-array name="segmentTypeOrderNo">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>200</item>
+        <item>210</item>
+        <item>220</item>
+        <item>230</item>
+        <item>240</item>
+        <item>250</item>
+        <item>260</item>
+        <item>270</item>
+        <item>280</item>
+        <item>290</item>
+        <item>300</item>
+        <item>310</item>
+    </string-array>
+    <string-array name="segmentTypeDirection">
+        <item>B</item>
+        <item>B</item>
+        <item>D</item>
+        <item>B</item>
+        <item>B</item>
+        <item>B</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+    <string-array name="segmentTypeShowResult">
+        <item>Y</item>
+        <item>Y</item>
+        <item>N</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>N</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>N</item>
+        <item>Y</item>
+    </string-array>
+    <string-array name="segmentTypeSystemDefined">
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+    </string-array>
+    <string-array name="segmentTypeStatus">
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+        <item>A</item>
+    </string-array>
+    <!-- usage_type-->
+    <string-array name="usageType">
+        <item>BG</item>
+        <item>TG</item>
+        <item>DG</item>
+        <item>EG</item>
+    </string-array>
+    <string-array name="usageTypeDescription">
+        <item>Gaz de fond</item>
+        <item>Gas de voyage</item>
+        <item>Gaz de déco</item>
+        <item>Gas de secours</item>
+    </string-array>
+    <string-array name="usageTypeSystemDefined">
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+        <item>Y</item>
+    </string-array>
+    <!-- 2017-01-14 MM Arrays to load Code tables - Ends-->
+
+    <!-- Metric Starts -->
+    <string-array name="commonGroupGroupDescriptionMetric">
+        <item>AL11Sim/Secours</item>
+        <item>AL11Dou/Secours</item>
+        <item>AL11Lat/Secours</item>
+        <item>AL11Sim</item>
+    </string-array>
+    <!-- Metric Ends -->
+
+    <!-- 2017-01-14 MM Arrays to load DB - Ends-->
+
+    <!-- 2017-01-14 MM Arrays to load Base tables - Starts-->
+    <string-array name="diverLastName">
+        <item> </item>
+        <item>Nom</item>
+    </string-array>
+    <string-array name="diverMiddleName">
+        <item> </item>
+        <item> </item>
+    </string-array>
+    <string-array name="diverFirstName">
+        <item> </item>
+        <item>Prénom</item>
+    </string-array>
+    <!-- 2017-01-14 MM Arrays to load Base tables - Ends-->
+
+    <!-- 2017-02-13 MM Arrays for the Activities - Starts-->
+    <string-array name="charles_constant_arrays">
+        <item>Pression constant</item>
+        <item>Volume constant</item>
+    </string-array>
+
+    <string-array name="status_arrays">
+        <item>Plan</item>
+        <item>Réel</item>
+    </string-array>
+
+    <string-array name="salinity_arrays">
+        <item>Salée</item>
+        <item>Douce</item>
+    </string-array>
+
+    <string-array name="trimix_arrays">
+        <item>Non</item>
+        <item>Oui</item>
+    </string-array>
+    <!-- 2017-02-13 MM Arrays for the Activities - Ends-->
+</resources>

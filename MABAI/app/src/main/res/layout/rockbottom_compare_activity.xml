@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="divesForCompare"
+            type="ca.myairbuddyandi.DivesForCompare"/>
+    </data>
+    <LinearLayout
+        android:id="@+id/rockbottom_compare_activity"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+            <TableRow
+                android:id="@+id/TableRowHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:weightSum="10"
+                android:paddingTop="4dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/meLbl"
+                    android:text="@{divesForCompare.meLabel}"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="3" />
+                <TextView
+                    android:id="@+id/lblSpacer11"
+                    android:text="@string/lbl_blank"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/lblPlan"
+                    android:text="@string/lbl_plan"
+                    android:textColor="@color/theme_myapp_action_bar"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/lblSpacer12"
+                    android:text="@string/lbl_blank"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/myBuddyLbl"
+                    android:text="@{divesForCompare.myBuddy}"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dip"
+                    android:enabled="false"
+                    android:layout_weight="3" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowDiveNoHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblBlank"
+                    android:text="@string/lbl_blank"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelDiveNo1"
+                    android:text="@string/hdr_dive1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelDiveNo2"
+                    android:text="@string/hdr_dive2"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelDiveNo3"
+                    android:text="@string/hdr_dive3"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowLogBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblLogBookNo"
+                    android:text="@string/hdr_log_book_no"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelDiveLogNo1"
+                    android:text="@{`` + divesForCompare.logBookNo1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelDiveLogNo2"
+                    android:text="@{`` + divesForCompare.logBookNo2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelDiveLogNo3"
+                    android:text="@{`` + divesForCompare.logBookNo3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowCylType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblSCylType"
+                    android:text="@string/lbl_cylinder"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelCylType1"
+                    android:text="@{`` + divesForCompare.cylType1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelCylType2"
+                    android:text="@{`` + divesForCompare.cylType2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelCylType3"
+                    android:text="@{`` + divesForCompare.cylType3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowCylVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblSCylVolume"
+                    android:text="@{@string/hdr_volume + @string/lbl_parenthesis_left + @string/lbl_volume_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelCylVolume1"
+                    android:text="@{`` + divesForCompare.myRatedVolume1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelCylVolume2"
+                    android:text="@{`` + divesForCompare.myRatedVolume2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelCylVolume3"
+                    android:text="@{`` + divesForCompare.myRatedVolume3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowAverageDepth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblSAverageDepth"
+                    android:text="@{@string/hdr_average_depth + @string/lbl_parenthesis_left + @string/lbl_depth_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelAverageDepth1"
+                    android:text="@{`` + divesForCompare.calcAverageDepth1}"
+                    android:gravity="center|center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelAverageDepth2"
+                    android:text="@{`` + divesForCompare.calcAverageDepth2}"
+                    android:gravity="center|center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelAverageDepth3"
+                    android:text="@{`` + divesForCompare.calcAverageDepth3}"
+                    android:gravity="center|center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowSac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblSac"
+                    android:text="@{@string/lbl_sac + @string/lbl_parenthesis_left + @string/lbl_sac_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelSac1"
+                    android:text="@{`` + divesForCompare.sac1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelSac2"
+                    android:text="@{`` + divesForCompare.sac2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelSac3"
+                    android:text="@{`` + divesForCompare.sac3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowRmv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblRmv"
+                    android:text="@{@string/lbl_rmv + @string/lbl_parenthesis_left + @string/lbl_rmv_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRmv1"
+                    android:text="@{`` + divesForCompare.rmv1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRmv2"
+                    android:text="@{`` + divesForCompare.rmv2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRmv3"
+                    android:text="@{`` + divesForCompare.rmv3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowPressureStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblStartingPsi"
+                    android:text="@{@string/lbl_pressure_start + @string/lbl_parenthesis_left + @string/lbl_pressure_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelStartingPsi1"
+                    android:text="@{`` + divesForCompare.myBeginningPressure1}"
+                    android:gravity="center|center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelStartingPsi2"
+                    android:text="@{`` + divesForCompare.myBeginningPressure2}"
+                    android:gravity="center|center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelStartingPsi3"
+                    android:text="@{`` + divesForCompare.myBeginningPressure3}"
+                    android:gravity="center|center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRTTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblRt"
+                    android:text="@{@string/lbl_running_totals + @string/lbl_parenthesis_left + @string/lbl_time_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRt1"
+                    android:text="@{divesForCompare.rt1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRt2"
+                    android:text="@{divesForCompare.rt2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRt3"
+                    android:text="@{divesForCompare.rt3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowRtPressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblRtPsi"
+                    android:text="@{@string/lbl_running_totals + @string/lbl_parenthesis_left + @string/lbl_pressure_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRtPsi1"
+                    android:text="@{`` + divesForCompare.rtPsi1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRtPsi2"
+                    android:text="@{`` + divesForCompare.rtPsi2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRtPsi3"
+                    android:text="@{`` + divesForCompare.rtPsi3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowRtVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblRtVol"
+                    android:text="@{@string/lbl_running_totals + @string/lbl_parenthesis_left + @string/lbl_volume_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRtVol1"
+                    android:text="@{`` + divesForCompare.rtVol1}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRtVol2"
+                    android:text="@{`` + divesForCompare.rtVol2}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelRtVol3"
+                    android:text="@{`` + divesForCompare.rtVol3}"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowPressureEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblPsiLeft"
+                    android:text="@{@string/lbl_pressure_end + @string/lbl_parenthesis_left + @string/lbl_pressure_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelPsiLeft1"
+                    android:text="@{`` + divesForCompare.psiLeft1}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelPsiLeft2"
+                    android:text="@{`` + divesForCompare.psiLeft2}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelPsiLeft3"
+                    android:text="@{`` + divesForCompare.psiLeft3}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowVolumeEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="8"
+                android:paddingTop="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/lblVolLeft"
+                    android:text="@{@string/lbl_volume_end + @string/lbl_parenthesis_left + @string/lbl_volume_unit + @string/lbl_parenthesis_right}"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelVolLeft1"
+                    android:text="@{`` + divesForCompare.volLeft1}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelVolLeft2"
+                    android:text="@{`` + divesForCompare.volLeft2}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/labelVolLeft3"
+                    android:text="@{`` + divesForCompare.volLeft3}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="2" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</layout>

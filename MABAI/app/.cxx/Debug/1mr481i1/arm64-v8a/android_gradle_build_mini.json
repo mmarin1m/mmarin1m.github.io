@@ -1,0 +1,29 @@
+{
+  "buildFiles": [
+    "C:\\Users\\mmari\\AndroidStudioProjects\\MABAI\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\mmari\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\mmari\\AndroidStudioProjects\\MABAI\\app\\.cxx\\Debug\\1mr481i1\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\mmari\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\mmari\\AndroidStudioProjects\\MABAI\\app\\.cxx\\Debug\\1mr481i1\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "myairbuddyandi::@6890427a1f51a3e7e1df": {
+      "artifactName": "myairbuddyandi",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\mmari\\AndroidStudioProjects\\MABAI\\app\\build\\intermediates\\cxx\\Debug\\1mr481i1\\obj\\arm64-v8a\\libmyairbuddyandi.so",
+      "runtimeFiles": [
+        "C:\\Users\\mmari\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\26\\liblog.so"
+      ]
+    }
+  }
+}

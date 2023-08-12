@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/dive_pick_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:queryHint="@string/code_query_hint" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_marginTop="43dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="top|fill_vertical"
+            android:background="@color/white"
+            app:stackFromEnd="true"
+            app:reverseLayout="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabComputerDive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="@dimen/fab_margin"
+            app:layout_anchorGravity="bottom|left|end"
+            android:background="@color/theme_myapp_window_background"
+            app:srcCompat="@drawable/ic_menu_computer"
+            android:contentDescription="@string/cd_float_computers" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:layout_anchorGravity="bottom|right|end"
+            android:background="@color/theme_myapp_window_background"
+            app:srcCompat="@drawable/ic_dive"
+            android:contentDescription="@string/cd_float_dives"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

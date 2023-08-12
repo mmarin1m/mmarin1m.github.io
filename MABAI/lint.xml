@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+	<!-- Ignore LabelFor -->
+    <issue id="LabelFor">
+		<ignore path="res/layout/dive_activity.xml" />
+        <ignore path="res/layout/diver_dive_group.xml" />
+        <ignore path="res/layout-land/diver_dive_group.xml" />
+    </issue>
+</lint>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="calculateAltitude"
+            type="ca.myairbuddyandi.CalculateAltitude"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/calculate_altitude_activity"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <LinearLayout
+            android:id="@+id/buttonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/calculate_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_calculate"
+                android:background="@color/very_light_blue"
+                android:layout_weight="0.5"
+                style="?android:attr/borderlessButtonStyle"/>
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_clear"
+                android:background="@color/white"
+                android:layout_weight="0.5"
+                style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttonRow">
+            <TableRow
+                android:id="@+id/TableRowHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="3"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/defaultUnit"
+                    android:text="@string/lbl_imperial"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:id="@+id/switchUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|center"
+                    app:srcCompat="@drawable/ic_switch"
+                    app:tint="@color/theme_myapp_action_bar"
+                    android:contentDescription="@string/cd_switch_unit"/>
+                <TextView
+                    android:id="@+id/otherUnit"
+                    android:text="@string/lbl_metric"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowSalinity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <!-- NOTE: Do not remove Unknown attribute android:selectedItemPosition-->
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/defaultSalinity"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:selectedItemPosition="@={calculateAltitude.defaultSalinityPosition}"
+                    android:layout_weight="2"
+                    app:ms_multiline="false"
+                    app:ms_enableFloatingLabel="false"
+                    app:ms_enableErrorLabel="false"
+                    app:setOnItemSelectedListener="@{calculateAltitude.getOnSpinnerChangedDefaultSalinity}"
+                    app:adapter="@{calculateAltitude.AdapterDefaultSalinity}"
+                    />
+                <TextView
+                    android:id="@+id/hdrSalinityLbl"
+                    android:text="@string/hdr_salinity"
+                    android:gravity="center|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/otherSalinity"
+                    android:text="@string/lbl_blank"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowAltitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <EditText
+                    android:text="@={`` + calculateAltitude.defaultAltitude}"
+                    android:id="@+id/defaultAL"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:selectAllOnFocus="true"
+                    android:labelFor="@+id/defaultAL"
+                    android:padding="6dp"
+                    style="@style/Widget.AppCompat.EditText"
+                    tools:ignore="Autofill" />
+                <TextView
+                    android:id="@+id/defaultALLbl"
+                    android:text="@string/lbl_imperial_depth_unit"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/hdrALLbl"
+                    android:text="@string/hdr_altitude"
+                    android:gravity="center|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/otherAL"
+                    android:text="@{`` + calculateAltitude.otherAltitude}"
+                    android:gravity="end|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/otherALLbl"
+                    android:text="@string/lbl_metric_depth_unit"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowDepth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <EditText
+                    android:text="@={`` + calculateAltitude.defaultDepth}"
+                    android:id="@+id/defaultDE"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionNext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:selectAllOnFocus="true"
+                    android:labelFor="@+id/defaultDE"
+                    android:padding="6dp"
+                    style="@style/Widget.AppCompat.EditText"
+                    tools:ignore="Autofill" />
+                <TextView
+                    android:id="@+id/defaultDELbl"
+                    android:text="@string/lbl_imperial_depth_unit"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/hdrDELbl"
+                    android:text="@string/hdr_depth"
+                    android:gravity="center|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/otherDE"
+                    android:text="@{`` + calculateAltitude.otherDepth}"
+                    android:gravity="end|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/otherDELbl"
+                    android:text="@string/lbl_metric_depth_unit"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowSP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:text="@{`` + calculateAltitude.defaultSurfacePressure}"
+                    android:id="@+id/defaultSP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:padding="6dp"/>
+                <TextView
+                    android:id="@+id/defaultSPLbl"
+                    android:text="@string/lbl_ata"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/hdrSPLbl"
+                    android:text="@string/hdr_surface_pressure"
+                    android:gravity="center|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/otherSP"
+                    android:text="@{`` + calculateAltitude.otherSurfacePressure}"
+                    android:gravity="end|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/otherSPLbl"
+                    android:text="@string/lbl_ata"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowSPmB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:text="@{`` + calculateAltitude.defaultSurfacePressureMbar}"
+                    android:id="@+id/defaultSPmB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:padding="6dp"/>
+                <TextView
+                    android:id="@+id/defaultSPmBLbl"
+                    android:text="@string/lbl_mbar"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/hdrSPmBLbl"
+                    android:text="@string/lbl_blank"
+                    android:gravity="center|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/otherSPmB"
+                    android:text="@{`` + calculateAltitude.otherSurfacePressureMbar}"
+                    android:gravity="end|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/otherSPmBLbl"
+                    android:text="@string/lbl_mbar"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowTD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:text="@{`` + calculateAltitude.defaultTheoreticalDepth}"
+                    android:id="@+id/defaultTD"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:padding="6dp"/>
+                <TextView
+                    android:id="@+id/defaultTDLbl"
+                    android:text="@string/lbl_imperial_sw_unit"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/calculate_button2"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:minHeight="0dp"
+                    android:text="@string/hdr_theoretical_depth"
+                    android:gravity="center|center"
+                    android:background="@color/very_light_blue"
+                    android:layout_weight="2"
+                    style="?android:attr/borderlessButtonStyle"/>
+                <TextView
+                    android:id="@+id/otherTD"
+                    android:text="@{`` + calculateAltitude.otherTheoreticalDepth}"
+                    android:gravity="end|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/otherTDLbl"
+                    android:text="@string/lbl_metric_sw_unit"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowSS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="0dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:text="@{`` + calculateAltitude.defaultSafetyStop}"
+                    android:id="@+id/defaultSS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:padding="6dp"/>
+                <TextView
+                    android:id="@+id/defaultSSULbl"
+                    android:text="@{calculateAltitude.defaultSafetyStopUnit}"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/hdrSSLbl"
+                    android:text="@string/hdr_safety_stop"
+                    android:gravity="center|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/otherSS"
+                    android:text="@{`` + calculateAltitude.otherSafetyStop}"
+                    android:gravity="end|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/otherSSULbl"
+                    android:text="@{calculateAltitude.otherSafetyStopUnit}"
+                    android:textStyle="bold"
+                    android:gravity="start|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TableRowNO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:weightSum="6"
+                android:paddingTop="50dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/noteLbl"
+                    android:text="@string/lbl_note"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:paddingStart="0sp"
+                    android:paddingEnd="0sp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/note"
+                    android:text="@string/help_calculate_altitude_note"
+                    android:gravity="start"
+                    android:layout_width="0dp"
+                    android:paddingStart="0sp"
+                    android:paddingEnd="10sp"
+                    android:layout_weight="5" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</layout>

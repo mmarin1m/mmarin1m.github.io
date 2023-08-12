@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/hdr_rates">
+        <EditTextPreference
+            android:key="descentRate"
+            android:title="@string/lbl_descent_rate_unit"
+            android:summary="@string/hint_descent_rate"
+            android:inputType="number"
+            android:defaultValue="@string/code_descent_rate_unit" />
+        <EditTextPreference
+            android:key="ascentRateToDs"
+            android:title="@string/lbl_ascent_rate_deep_stop_unit"
+            android:summary="@string/hint_ascent_rate_deep_stop_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_ascent_rate_deep_stop_unit" />
+        <EditTextPreference
+            android:key="ascentRateToSs"
+            android:title="@string/lbl_ascent_rate_safety_stop_unit"
+            android:summary="@string/hint_ascent_rate_safety_stop_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_ascent_rate_safety_stop_unit" />
+        <EditTextPreference
+            android:key="ascentRateToSu"
+            android:title="@string/lbl_ascent_rate_surface_unit"
+            android:summary="@string/hint_ascent_rate_surface_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_ascent_rate_surface_unit" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/hdr_depths">
+        <EditTextPreference
+            android:key="bubbleCheckDepth"
+            android:title="@string/lbl_bubble_check_depth_unit"
+            android:summary="@string/hint_bubble_check_depth_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_bubble_check_depth_unit"/>
+        <EditTextPreference
+            android:key="safetyStopDive"
+            android:title="@string/lbl_safety_stop_dive_unit"
+            android:summary="@string/hint_safety_stop_dive_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_safety_stop_dive_unit" />
+        <EditTextPreference
+            android:key="safetyStopDepth"
+            android:title="@string/lbl_safety_stop_depth_unit"
+            android:summary="@string/hint_safety_stop_depth_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_safety_stop_depth_unit" />
+        <EditTextPreference
+            android:key="deepStopPercent"
+            android:title="@string/lbl_deep_stop_percent_unit"
+            android:summary="@string/hint_deep_stop_percent_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_deep_stop_percent_unit"/>
+        <EditTextPreference
+            android:key="deepStopDive"
+            android:title="@string/lbl_deep_stop_dive_unit"
+            android:summary="@string/hint_deep_stop_dive_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_deep_stop_dive_unit" />
+        <EditTextPreference
+            android:key="end"
+            android:title="@string/lbl_end_unit"
+            android:summary="@string/hint_end_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_end_unit" />
+    </PreferenceCategory>
+    <PreferenceCategory
+    android:title="@string/hdr_times">
+    <EditTextPreference
+        android:key="bubbleCheckTime"
+        android:title="@string/lbl_bubble_check_time"
+        android:summary="@string/hint_bubble_check_time"
+        android:inputType="number"
+        android:defaultValue="@string/code_turnaround_time" />
+    <EditTextPreference
+        android:key="turnaroundTime"
+        android:title="@string/lbl_turnaround_time"
+        android:summary="@string/hint_turnaround_time"
+        android:inputType="number"
+        android:defaultValue="@string/code_turnaround_time" />
+    <CheckBoxPreference
+        android:key="subtractDeepStopTime"
+        android:title="@string/lbl_subtract_deep_stop_time"
+        android:summary="@string/hint_subtract_deep_stop_time"
+        android:defaultValue="@string/code_subtract_deep_stop_time" />
+    <EditTextPreference
+        android:key="deepStopTime"
+        android:title="@string/lbl_deep_stop_time"
+        android:summary="@string/hint_deep_stop_time"
+        android:defaultValue="@string/code_deep_stop_time" />
+    <EditTextPreference
+        android:key="safetyStopTime"
+        android:title="@string/lbl_safety_stop_time"
+        android:summary="@string/hint_safety_stop_time"
+        android:defaultValue="@string/code_safety_stop_time"/>
+    <EditTextPreference
+        android:key="ooaTurnaroundTime"
+        android:title="@string/lbl_ooa_turnaround_time"
+        android:summary="@string/hint_ooa_turnaround_time"
+        android:defaultValue="@string/code_ooa_turnaround_time"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/hdr_pressures">
+        <EditTextPreference
+            android:key="myMinPressure"
+            android:title="@string/lbl_minimum_pressure_unit"
+            android:summary="@string/hint_minimum_pressure_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_min_pressure_unit"/>
+        <EditTextPreference
+            android:key="rockbottomMinPressure"
+            android:title="@string/lbl_rockbottom_minimum_pressure_unit"
+            android:summary="@string/hint_rockbottom_minimum_pressure_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_rockbottom_min_pressure_unit"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/hdr_sac_rmv">
+        <EditTextPreference
+            android:key="rockbottomSac"
+            android:title="@string/lbl_rockbottom_sac_unit"
+            android:summary="@string/hint_rockbottom_sac_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_rockbottom_sac_unit" />
+        <EditTextPreference
+            android:key="rockbottomRmv"
+            android:title="@string/lbl_rockbottom_rmv_unit"
+            android:summary="@string/hint_rockbottom_rmv_unit"
+            android:inputType="number"
+            android:defaultValue="@string/code_rockbottom_rmv_unit" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/hdr_blending">
+        <EditTextPreference
+            android:key="heliumMix"
+            android:title="@string/lbl_helium_mix"
+            android:summary="@string/hint_helium_mix"
+            android:inputType="number"
+            android:defaultValue="@string/code_helium_mix" />
+        <EditTextPreference
+            android:key="oxygenMix"
+            android:title="@string/lbl_oxygen_mix"
+            android:summary="@string/hint_oxygen_mix"
+            android:inputType="number"
+            android:defaultValue="@string/code_oxygen_mix" />
+        <EditTextPreference
+            android:key="topOffMix"
+            android:title="@string/lbl_top_off_mix"
+            android:summary="@string/hint_top_off_mix"
+            android:inputType="number"
+            android:defaultValue="@string/code_top_off_mix" />
+        <EditTextPreference
+            android:key="lengthHose"
+            android:title="@string/lbl_length_hose"
+            android:summary="@string/hint_length_hose"
+            android:inputType="number"
+            android:defaultValue="@string/code_length_hose" />
+        <EditTextPreference
+            android:key="diameterHose"
+            android:title="@string/lbl_diameter_hose"
+            android:summary="@string/hint_diameter_hose"
+            android:inputType="number"
+            android:defaultValue="@string/code_diameter_hose" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/hdr_bluetooth">
+        <EditTextPreference
+            android:key="scanningTimeout"
+            android:title="@string/lbl_scanning_timeout"
+            android:summary="@string/hint_scanning_period"
+            android:inputType="number"
+            android:defaultValue="@string/code_scanning_timeout" />
+        <EditTextPreference
+            android:key="connectionTimeout"
+            android:title="@string/lbl_connection_timeout"
+            android:summary="@string/hint_connecting_period"
+            android:inputType="number"
+            android:defaultValue="@string/code_scanning_timeout" />
+    </PreferenceCategory>
+</PreferenceScreen>

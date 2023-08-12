@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/usage_type_pick_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="5dp"
+        android:layout_margin="5dp">
+        <TableRow
+            android:id="@+id/TableRow01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="7"
+            android:shrinkColumns="0"
+            android:stretchColumns="1,2">
+            <CheckBox
+                android:id="@+id/checkBoxHD"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:checked="false"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/hdrType"
+                android:text="@string/hdr_type"
+                android:gravity="center"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+            <TextView
+                android:id="@+id/hdrDescription"
+                android:text="@string/hdr_description"
+                android:gravity="center"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+        </TableRow>
+    </androidx.cardview.widget.CardView>
+</layout>

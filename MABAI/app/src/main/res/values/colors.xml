@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From generating the app -->
+    <color name="colorPrimary">#33B5E5</color>
+    <color name="colorPrimaryDark">#1A21E1</color>
+    <color name="colorAccent">#33B5E5</color>
+
+    <!-- Material color palette -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="holo_blue">#33B5E5</color>
+    <color name="blue">#1A21E1</color>
+    <color name="light_blue">#FF1AE1D0</color>
+    <color name="very_light_blue">#1de9b6</color>
+    <color name="very_light_blue_tinted">#681de9b6</color>
+    <item name="purple" type="color">#9c27b0</item>
+    <item name="green" type="color">#1b5e20</item>
+    <item name="red" type="color">#f44336</item>
+    <item name="light_green" type="color">#689f38</item>
+    <item name="teal" type="color">#009688</item>
+
+    <!-- My App Branding Colors -->
+    <!-- All Green and Brown are left on purpose to find out what's what! -->
+    <!-- theme_myapp_accent controls circle around the envelop! -->
+    <color name="theme_myapp_primary_light">@color/light_blue</color>
+    <color name="theme_myapp_primary_dark">@color/blue</color>
+    <color name="theme_myapp_primary">@color/holo_blue</color>
+    <color name="theme_myapp_accent">@color/holo_blue</color>
+    <color name="theme_myapp_control_highlight">@color/theme_myapp_primary</color>
+    <color name="theme_myapp_action_bar">@color/theme_myapp_primary</color>
+    <color name="theme_myapp_window_background">@color/white</color>
+    <color name="theme_myapp_text_color">@color/black</color>
+
+    <!-- Other colors -->
+</resources>
