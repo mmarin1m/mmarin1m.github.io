@@ -1,5 +1,0 @@
-<root>
-    <item name='android.view.WindowManager android.view.Display getDefaultDisplay()'>
-        <annotation name='android.support.annotation.NonNull' />
-    </item>
-</root>

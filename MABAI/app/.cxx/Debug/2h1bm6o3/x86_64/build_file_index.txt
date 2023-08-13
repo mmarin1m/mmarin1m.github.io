@@ -1,1 +1,0 @@
-C:\Users\mmari\AndroidStudioProjects\MABAI\app\src\main\cpp\CMakeLists.txt
